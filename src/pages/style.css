@@ -1,0 +1,294 @@
+/* LotBox styles */
+:root {
+  --color-dark: #000;
+  --color-light: #fff;
+  --color-gray: #c9c9c9;
+}
+
+.lot-box {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between;
+    align-items: center; */
+  padding: 16px;
+  border: 1px solid var(--color-gray);
+  border-radius: 8px;
+  margin: 10px;
+
+  /* max-width: 200px; */
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.lot-box:hover {
+  background-color: var(--color-gray);
+}
+
+.lot-title {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.lot-time {
+  color: var(--color-dark);
+  margin-bottom: 8px;
+}
+
+.betting-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.betting-number {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  padding: 8px;
+  border: 1px solid var(--color-gray);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.betting-number.selected {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.center-button {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  margin: 0 auto;
+
+  width: 50%;
+}
+
+.center-button:hover {
+  background-color: var(--color-gray);
+}
+
+/* DetailPage styles */
+.detail-page {
+  padding: 20px;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.detail-page img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.detail-page h1 {
+  font-size: 1.8em;
+  margin-bottom: 16px;
+}
+
+.detail-page p {
+  font-size: 1em;
+  color: var(--color-gray);
+}
+
+/* AdminCreateLot styles */
+.create-lot {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 16px;
+  border: 1px solid var(--color-gray);
+  border-radius: 8px;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+.create-lot label {
+  font-weight: bold;
+}
+
+.create-lot input {
+  padding: 8px;
+  border: 1px solid var(--color-gray);
+  border-radius: 4px;
+}
+
+.create-lot button {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.create-lot button:hover {
+  background-color: var(--color-gray);
+}
+
+
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Header styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px;
+  background-color: var(--color-light);
+  border-bottom: 1px solid var(--color-gray);
+  z-index: 10;
+}
+
+.header-button {
+  width: 100%;
+  /* Full width */
+  background-color: var(--color-gray);
+  color: var(--color-dark);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 4px 4px;
+  flex-grow: 1;
+  /* Allow buttons to resize flexibly */
+  text-align: center;
+  /* Spacing between buttons */
+}
+
+.connect-wallet {
+  /* background-color: black; */
+  /* Background color for the connect button */
+  color: white;
+  /* Text color for the connect button */
+  border: none;
+  /* Remove default border */
+  /* padding: 10px 20px; */
+  /* Padding for the connect button */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  width: 100%;
+  z-index: 10;
+  /* Spacing between rows */
+  /* Pointer cursor on hover */
+}
+
+.header-button.active {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+/* Bottom bar styles */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+
+  background-color: var(--color-light);
+  border-top: 1px solid var(--color-gray);
+  z-index: 10;
+}
+
+.bottom-button {
+  width: 100%;
+  /* Full width */
+
+  /* Optional: to limit the button width */
+  background-color: var(--color-gray);
+  color: var(--color-dark);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 4px 4px;
+  /* Spacing between buttons */
+}
+
+.bottom-button.active {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+
+  /* Center the group */
+  max-width: 40%;
+  width: 100%;
+  flex-grow: 1;
+  /* Allow the button group to grow and take up space */
+  /* Adjust as necessary for desired width */
+  /* flex-wrap: wrap; */
+  /* Allow buttons to wrap if necessary */
+}
+
+.header .button-group,
+.bottom-bar .button-group {
+  width: 100%;
+  /* Allow button group to take full width of header and bottom bar */
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 8px;
+  }
+
+  .filter-button-group,
+  .connect-wallet {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .header-button {
+    padding: 6px 8px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 6px;
+  }
+
+  .header-button {
+    padding: 4px 6px;
+    font-size: 0.8em;
+  }
+}
